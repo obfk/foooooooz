@@ -1,11 +1,8 @@
-'use strict';
+angular.module('formExample', [])
+  .controller('QueueController', ['$scope', function($scope) {
+    $scope.master = {};
 
-/* Controllers */
-
-angular.module('myApp.controllers', [])
-  .controller('MyCtrl1', ['$scope', function($scope) {
-
-  }])
-  .controller('MyCtrl2', ['$scope', function($scope) {
-
+    $scope.queue = function(user) {
+      $scope.master = angular.copy(user);
+    };
   }]);
